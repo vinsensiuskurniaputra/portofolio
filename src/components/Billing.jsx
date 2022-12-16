@@ -1,6 +1,6 @@
 import {apple, google, bill} from "../assets"
 import styles, {layout} from '../style'
-
+ 
 const Billing = () => {
   return (
     <section className={`${layout.sectionReverse} `}>
