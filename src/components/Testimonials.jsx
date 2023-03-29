@@ -1,29 +1,33 @@
 import { feedback } from '../constants'
 import styles from '../style'
 import FeedbackCard from "./FeedbackCard"
+import { projectInstagram, projectPerpustakaan, projectPelanggaran } from '../assets';
 
 const Testimonials = () => {
   return (
     <section
-      id='clients'
+      id='projek'
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}
     >
       <div className='absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient' />
-      <div className='w-full flex md:flex-row flex-col justify-between items-center mb-6 sm:mb-16 relative z-[1]'>
-        <h1 className={styles.heading2}>
-          What people are <br className='hidden sm:block' /> saying about us
-        </h1>
-        <div className='md:mt-0 mt-6 w-full'>
-          <p className={`${styles.paragraph} max-w-[450px] text-left`}>
-            Everything you need to accept card payments and grow your business
-            anywhere on the planet.
-          </p>
-        </div>
+      <div className='w-full mb-6 sm:mb-16 relative z-[1]'>
+        <h1 className={styles.heading2}>Projek Terbaik</h1>
       </div>
-      <div className={`relative z-[1] flex flex-wrap sm:justify-start justify-center w-full feedback-container`}>
-        {feedback.map((card)=>(
-          <FeedbackCard key={card.id} {...card} />
-        ))}
+      <div
+        className={`relative z-[1] grid grid-cols-1 sm:grid-cols-3 justify-items-center w-full feedback-container`}
+      >
+        <FeedbackCard
+          img={projectPerpustakaan}
+          content='Aplikasi tersebut berguna untuk memenage atau mengatur aktivitas peminjamaan di dalam perpustakaan. Sistem ini dibuat dengan laravel.'
+        />
+        <FeedbackCard
+          img={projectPelanggaran}
+          content='Aplikasi tersebut berguna untuk memenage atau mengatur aktivitas pelanggaran di dalam seolah. Sistem ini dibuat dengan laravel.'
+        />
+        <FeedbackCard
+          img={projectInstagram}
+          content='Aplikasi ini merupakan instagram yang disederhanakan. Sistem ini dibuat dengan NEXT JS.'
+        />
       </div>
     </section>
   );

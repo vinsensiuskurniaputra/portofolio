@@ -1,3 +1,4 @@
+import photoProfile from "./photoProfile.png";
 import airbnb from "./airbnb.png";
 import bill from "./bill.png";
 import binance from "./binance.png";
@@ -23,8 +24,17 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import laravel from "./laravel.svg";
+import mySql from "./mySql.svg";
+import android from "./android.svg";
+import tailwind from "./tailwind.svg";
+import react from "./react.svg";
+import projectInstagram from "./projectInstagram.png";
+import projectPelanggaran from "./projectPelanggaran.png";
+import projectPerpustakaan from "./projectPerpustakaan.png";
 
 export {
+  photoProfile,
   airbnb,
   bill,
   binance,
@@ -50,4 +60,12 @@ export {
   people01,
   people02,
   people03,
+  laravel,
+  mySql,
+  android,
+  tailwind,
+  react,
+  projectInstagram,
+  projectPelanggaran,
+  projectPerpustakaan,
 };

@@ -1,48 +1,39 @@
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Buttons";
+import { laravel, android, mySql, tailwind, react } from '../assets';
 
-const FeatureCard = ({ title, icon, content, index }) => (
+
+
+const FeatureCard = ({ title, icon, index }) => (
   <div
-    className={`flex flex-row rounded-[20px] p-6 ${
-      index !== features.length - 1 && "mb-6"
-    } feature-card`}
+    className={`flex items-center flex-row rounded-[20px] p-6 feature-card`}
   >
     <div
       className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}
     >
-      <img src={icon} alt='icon' className='w-[50%] h-[50%] object-contain' />
+      <img src={icon} alt='icon' className='w-[50%] h-[50%] object-contain ' />
     </div>
     <div className='flex flex-1 flex-col ml-3'>
       <h1 className='font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1'>
         {title}
       </h1>
-      <p className='font-poppins font-normal text-dimWhite text-[16px] leading-[24px] mb-1'>
-        {content}
-      </p>
     </div>
   </div>
 );
 
 const Business = () => {
   return (
-    <section id='features' className={`${layout.section}`}>
+    <section id='skill' className={`${layout.section}`}>
       <div className={`${layout.sectionInfo}`}>
-        <h2 className={`${styles.heading2}`}>
-          You do the business,
-          <br className='hidden sm:block' /> we’ll handle the money.
-        </h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          With the right credit card, you can improve your financial life by
-          building credit, earning rewards and saving money. But with hundreds
-          of credit cards on the market.
-        </p>
-        <Button styles='mt-10' />
-      </div>
-      <div className={`${layout.sectionImg} flex-col`}>
-        {features.map((feature, index) => (
-          <FeatureCard key={feature.id} {...feature} index={index} />
-        ))}
+        <h2 className={`${styles.heading2}`}>Skill</h2>
+        <div className={`flex flex-wrap`}>
+          <FeatureCard key='1' title='Laravel' icon={laravel} content='sabdsaj' index='1' />
+          <FeatureCard key='1' title='MySQL' icon={mySql} content='' index='2' />
+          <FeatureCard key='1' title='Tailwind CSS' icon={tailwind} content='jbdsajbj' index='3' />
+          <FeatureCard key='1' title='Android Studio' icon={android} content='' index='4' />
+          <FeatureCard key='1' title='React JS' icon={react} content='' index='5' />
+        </div>
       </div>
     </section>
   );
